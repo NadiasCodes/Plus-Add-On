@@ -25,7 +25,36 @@
 
     <br />
     <hr />
+    <!-- in the action we insert the url that we are being asked from the back end dev -->
+    <!-- the name is basically for the back-end devs, so we have to name then accordingly based on what we are coding 
+    type is for html id is for the label and the name is for the back-end devs -->
+    <!-- so radio input is being used to have only once choice, and for the name we give
+    a general word based on our labels, at least something to make sense -->
+    <!-- if we want multiple selections, then we go with checkbox -->
+    <form action="/submit.">
+      <label for="email">What is your email adress? </label>
+      <input type="email" name="email" id="email" />
+      <div>
+        <label> Dog or Cat ? </label>
 
-    <form action="/submit."></form>
+        <input type="radio" name="pet" id="cat" /><label for="cat">cat</label>
+        <input type="radio" name="pet" id="dog" /><label for="dog">dog</label>
+      </div>
+      <div>
+        <label> What pets do you have? </label>
+        <input type="checkbox" name="pets" id="cat" /><label for="cat"
+          >Cats</label
+        >
+        <input type="checkbox" name="pets" id="dog" /><label for="dog"
+          >dogs</label
+        >
+        <input type="checkbox" name="pets" id="frog" /><label for="frog"
+          >frogs</label
+        >
+      </div>
+      <div>
+        <input type="submit" value="sign up" />
+      </div>
+    </form>
   </body>
 </html>
