@@ -31,24 +31,32 @@
     <!-- so radio input is being used to have only once choice, and for the name we give
     a general word based on our labels, at least something to make sense -->
     <!-- if we want multiple selections, then we go with checkbox -->
+    <!-- for radio boxes and checkbox we should always have values, so the backend knows whats going on -->
     <form action="/submit.">
       <label for="email">What is your email adress? </label>
       <input type="email" name="email" id="email" />
       <div>
         <label> Dog or Cat ? </label>
 
-        <input type="radio" name="pet" id="cat" /><label for="cat">cat</label>
-        <input type="radio" name="pet" id="dog" /><label for="dog">dog</label>
+        <input type="radio" name="pet" id="cat" value="cat" /><label for="cat"
+          >cat</label
+        >
+        <input type="radio" name="pet" id="dog" value="dog" /><label for="dog"
+          >dog</label
+        >
       </div>
       <div>
         <label> What pets do you have? </label>
-        <input type="checkbox" name="pets" id="cat" /><label for="cat"
+        <input type="checkbox" name="pets" id="cat" value="cat" /><label
+          for="cat"
           >Cats</label
         >
-        <input type="checkbox" name="pets" id="dog" /><label for="dog"
+        <input type="checkbox" name="pets" id="dog" value="dog" /><label
+          for="dog"
           >dogs</label
         >
-        <input type="checkbox" name="pets" id="frog" /><label for="frog"
+        <input type="checkbox" name="pets" id="frog" value="frog" /><label
+          for="frog"
           >frogs</label
         >
       </div>

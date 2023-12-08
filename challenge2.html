@@ -12,7 +12,7 @@
     <!-- challenege 3: create a radio input asking "what is your favorite primary color" with blue, yellow and red as options. Have blue checked -->
     <!-- challenege 4: create a checkbox asking " How do you like to travel" with plane. bus, train, car, walking as options -->
     <label for="query">What's on your mind?</label>
-    <input type="search"  name="query" id="query"/>
+    <input type="search" name="query" id="query" />
 
     <div>
       <form action="/submit">
@@ -23,25 +23,29 @@
     </div>
     <div>
       <label>what is your favorite primary color?</label>
-      <input type="radio" name="colors" id="blue" checked /><label for="blue"
+      <input type="radio" name="colors" id="blue" value="blue" /><label
+        for="blue"
         >Blue</label
       >
-      <input type="radio" name="colors" id="yellow" /><label for="yellow"
+      <input type="radio" name="colors" id="yellow" value="yellow" /><label
+        for="yellow"
         >Yellow</label
       >
-      <input type="radio" name="colors" id="red" /><label for="red">Red</label>
+      <input type="radio" name="colors" id="red" value="red" /><label for="red"
+        >Red</label
+      >
     </div>
     <div>
       <label>How do you travel?</label>
-      <input type="checkbox" name="transport" id="plane" />
+      <input type="checkbox" name="transport" id="plane" value="plane" />
       <label for="plane">Plane</label>
-      <input type="checkbox" name="transport" id="train" />
+      <input type="checkbox" name="transport" id="train" value="train" />
       <label for="train">Train</label>
-      <input type="checkbox" name="transport" id="bus" />
+      <input type="checkbox" name="transport" id="bus" value="bus" />
       <label for="bus">Bus</label>
-      <input type="checkbox" name="transport" id="car" />
+      <input type="checkbox" name="transport" id="car" value="car" />
       <label for="car">Car</label>
-      <input type="checkbox" name="transport" id="walking" />
+      <input type="checkbox" name="transport" id="walking" value="walking" />
       <label for="walking">Walking</label>
     </div>
   </body>
