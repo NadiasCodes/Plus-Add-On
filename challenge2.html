@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Input types</title>
+  </head>
+  <body>
+    <!-- challenge 1: create a search input with a label "whats on your mind"-->
+    <!-- challenge 2: create a form with a dare input asking "what is your birth date", a submit button
+    and the form should send the date to /submit -->
+    <!-- challenege 3: create a radio input asking "what is your favorite primary color" with blue, yellow and red as options. Have blue checked -->
+    <!-- challenege 4: create a checkbox asking " How do you like to travel" with plane. bus, train, car, walking as options -->
+    <label for="query">What's on your mind?</label>
+    <input type="search"  name="query" id="query"/>
+
+    <div>
+      <form action="/submit">
+        <label for="birthday">What is your birth date?</label>
+        <input type="date" name="birthday" id="birthday"" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div>
+      <label>what is your favorite primary color?</label>
+      <input type="radio" name="colors" id="blue" checked /><label for="blue"
+        >Blue</label
+      >
+      <input type="radio" name="colors" id="yellow" /><label for="yellow"
+        >Yellow</label
+      >
+      <input type="radio" name="colors" id="red" /><label for="red">Red</label>
+    </div>
+    <div>
+      <label>How do you travel?</label>
+      <input type="checkbox" name="transport" id="plane" />
+      <label for="plane">Plane</label>
+      <input type="checkbox" name="transport" id="train" />
+      <label for="train">Train</label>
+      <input type="checkbox" name="transport" id="bus" />
+      <label for="bus">Bus</label>
+      <input type="checkbox" name="transport" id="car" />
+      <label for="car">Car</label>
+      <input type="checkbox" name="transport" id="walking" />
+      <label for="walking">Walking</label>
+    </div>
+  </body>
+</html>
