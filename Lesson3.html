@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Select Element</title>
+  </head>
+  <style>
+    select {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      min-width: 200px;
+      margin: 20px;
+    }
+  </style>
+  <body>
+    <!-- They are called "select" because they have nested elements.
+  So select is a dropdown.  -->
+    <label for="countries">What country would you like to travel to?</label>
+    <select name="country" id="countries">
+      <option value="">Select a country</option>
+      <option value="france">France</option>
+      <option value="sweden">Sweden</option>
+      <option value="japan">Japan</option>
+      <option value="korea">Korea</option>
+    </select>
+
+    <!-- accesing data from java -->
+
+    <script>
+           function showSelectedCountry(event) {
+             if (event.target.value.length > 0) {
+               // alert(event.target.value);
+               if (event.target.value === "france") {
+                 alert("Bonjour!");
+               }
+
+               if (event.target.value ==="japan") {
+                 alert("konnichiwa!");
+               }
+      if (event.target.value === "sweden") {
+                 alert("hi!");
+
+             }
+           }
+          }
+
+           let countriesSelect = document.querySelector("#countries");
+           console.log(countriesSelect.value);
+           countriesSelect.addEventListener("change", showSelectedCountry);
+    </script>
+  </body>
+</html>
