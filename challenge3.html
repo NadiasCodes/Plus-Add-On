@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Select Element</title>
+  </head>
+  <body>
+    <!--    Create a select element inside a form with 5 fruits as an option and label
+      "What is your favorite fruit?" -->
+
+    <form>
+      <label for="fruits">What is your favorite fruit?</label>
+      <select name="fruits" id="fruits">
+        <option value="">Select a fruit</option>
+        <option value="banana">🍌Banana</option>
+        <option value="strawberry">🍓Strawberry</option>
+        <option value="apple">🍎Apple</option>
+        <option value="apricot">🍑Apricot</option>
+        <option value="cherry">🍒Cherry</option>
+      </select>
+    </form>
+
+    <!--   Create a select element with the 3 primary colors, when the user selects
+      red, alert the emoji ❤️, when the user selects blue, alert the emoji 💙
+      and the the user selects yellow, alert 💛. Include an empty option which
+      is selected by default. -->
+
+    <label for="color">What is your favorite color?</label>
+    <select name="color" id="color">
+      <option value="">Choose a color</option>
+      <option value="purple">Purple</option>
+      <option value="yellow">Yellow</option>
+      <option value="white">White</option>
+    </select>
+
+    <script>
+      function primaryColor(event) {
+        if (event.target.value.length > 0) {
+          if (event.target.value === "purple") {
+            alert("💜");
+          }
+          if (event.target.value === "yellow") {
+            alert("💛");
+          }
+          if (event.target.value === "white") {
+            alert("🤍");
+          }
+        }
+      }
+
+      let favoriteColor = document.querySelector("#color");
+      favoriteColor.addEventListener("change", primaryColor);
+    </script>
+  </body>
+</html>
