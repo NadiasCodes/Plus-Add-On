@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h3>Challenge 1</h3>
+    <p>
+      Display the current date in the div below, only 5 seconds afer the page
+      loads
+    </p>
+    <div id="date">👉 Current date here 👈</div>
+
+    <h3>Challenge 2</h3>
+    <p>
+      Display the number of milliseconds of the current date below and update it
+      every millisecond
+    </p>
+    <div id="milliseconds">👉 Current milliseconds here 👈</div>
+
+    <script>
+      function showDate() {
+        let dateElement = document.querySelector("#date");
+        dateElement.innerHTML = new Date();
+      }
+
+      setTimeout(showDate, 5000);
+
+      function showCurrentMilliSeconds() {
+        let millisecondsElement = document.querySelector("#milliseconds");
+        let currentDate = new Date();
+        millisecondsElement.innerHTML = currentDate.getMilliseconds();
+      }
+      showCurrentMilliSeconds();
+      setInterval(showCurrentMilliSeconds, 1);
+    </script>
+  </body>
+</html>
