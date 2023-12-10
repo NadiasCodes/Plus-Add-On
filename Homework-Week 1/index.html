@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time zone dropdown 🙀</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+  </head>
+  <style>
+    select {
+      display: block;
+      padding: 13px 15px;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <form>
+      <select name="cities" id="cities">
+        <option value="">Select</option>
+        <option value="paris">Paris 🇫🇷</option>
+        <option value="tokyo">Tokyo 🇯🇵</option>
+        <option value="sydney">Sydney 🇦🇺</option>
+      </select>
+    </form>
+
+    <script>
+      function changeCountry(event) {
+        if (event.target.value.length > 0) {
+          if (event.target.value === "paris") {
+            alert(`it is ${parisTime}, in Europe/Paris`);
+          }
+          if (event.target.value === "sydney") {
+            alert(`it is ${sydneyTime}, in Australia/Sydney`);
+          }
+          if (event.target.value === "tokyo") {
+            alert(`it is ${tokyoTime}, in Asia/Tokyo`);
+          }
+        }
+      }
+
+      let cities = document.querySelector("#cities");
+      cities.addEventListener("change", changeCountry);
+
+      let parisTime = moment()
+        .tz("Europe/Paris")
+        .format("dddd, MMMM D, YYYY hh:mm:ss A");
+
+      let parisTimeElement = document.querySelector("paris");
+
+      let sydneyTime = moment()
+        .tz("Australia/Sydney")
+        .format("dddd, MMMM D, YYYY hh:mm:ss A");
+
+      let sydneyTimeElement = document.querySelector("sydney");
+
+      let tokyoTime = moment()
+        .tz("Asia/Tokyo")
+        .format("dddd, MMMM D, YYYY hh:mm:ss A");
+      let tokyoTimeElement = document.querySelector("tokyo");
+    </script>
+  </body>
+</html>
